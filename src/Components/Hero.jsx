@@ -49,7 +49,7 @@ export const Hero = () => {
         {/* Action Buttons with Hover Effects */}
         <div className="mt-8 space-x-4">
           <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full">
-            Contact with me
+          Connect Me 
           </button>
           <button 
       onClick={handleResumeClick}

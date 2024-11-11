@@ -16,9 +16,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section"); // Select all sections
-    const links = document.querySelectorAll("nav a"); // Select all nav links
-
+    const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,13 +26,13 @@ const Header = () => {
           }
         });
       },
-      { threshold: 0.5 } // 50% of the section should be visible before it's considered "active"
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => observer.observe(section));
 
     return () => {
-      observer.disconnect(); // Clean up the observer on unmount
+      observer.disconnect();
     };
   }, []);
 
@@ -100,15 +98,15 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Connect Me Button for Desktop */}
+        {/* Connect Me Button for Desktop Only */}
         <a
-              href="https://wa.me/6379055616?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transform transition-transform duration-300 hover:scale-105"
-            >
-              Connect Me
-            </a>
+          href="https://wa.me/6379055616?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transform transition-transform duration-300 hover:scale-105"
+        >
+          Contact with me
+        </a>
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
@@ -158,14 +156,6 @@ const Header = () => {
             >
               Contact
             </a>
-            <a
-              href="https://wa.me/6379055616?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transform transition-transform duration-300 hover:scale-105"
-            >
-              Connect Me
-            </a>
           </div>
         )}
       </div>
@@ -174,4 +164,3 @@ const Header = () => {
 };
 
 export default Header;
-            
