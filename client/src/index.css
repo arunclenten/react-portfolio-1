@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    text-align: -webkit-center;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes gradientText {
+    0%, 100% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+  }
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradientText 3s ease infinite;
+  }
+  
